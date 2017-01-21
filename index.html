@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </head>
+  <style>
+.share-wrapper {
+      position: fixed;
+      bottom: 15px;
+      margin-left: -15px;
+  }
+
+  .share-dropdown-wrapper:hover {
+      background: none;
+  }
+
+  .icon-material-share {
+      border-radius: 100px;
+      width: 62px;
+      padding-left: 10px;
+  }
+
+  .share-ripple {
+      border-radius: 100px;
+  }
+</style>
+<body>
+
+<div class="container">
+  <h2>Un simple to-do de mierda</h2>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#nueva">Nueva Tarea</a></li>
+    <li><a data-toggle="tab" href="#buscar">Tareas</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="nueva" class="tab-pane fade in active">
+      <h3>Nueva Tarea</h3>
+	  <div class="row formclass" id="form">
+		  <div class="col-sm-4">
+			 <div class="form-group">
+				<input type="text" class="form-control" id="txtTask" placeholder="Nueva Tarea">
+			  </div>
+		  </div>
+		  <div class="col-sm-4">
+			 <div class="form-group">
+				 <div class="form-group">
+					<select class="form-control" id="selectTipo">
+						<option>Seleccione la Prioridad...</option>
+					  <option>Normal</option>
+					  <option>Urgente</option>
+					</select>
+				  </div>
+			  </div>
+		  </div>
+		  <div class="col-sm-4">
+			 <div class="form-group"><!--
+				  <a href="#" id="addMore2">
+					<span class="glyphicon glyphicon-plus"></span>
+				</a>-->
+			  </div>
+		  </div>
+	  </div>
+
+	  <button id="btnAgregar" class="btn btn-primary">Agregar</button>
+    </div>
+    <div id="buscar" class="tab-pane fade">
+	<div class="row">
+		  <div class="col-sm-4">
+			 <div class="form-group">
+				<input type="text" class="form-control" id="txtBuscar" placeholder="tarea">
+			  </div>
+		  </div>
+		  <div class="col-sm-4">
+			 <div class="form-group">
+					<button id="btnBuscar" class="btn btn-primary">Buscar</button>
+			  </div>
+		  </div>
+	  </div>
+
+
+
+
+
+
+      	  <div class="row">
+		  <div class="col-sm-4">
+			 <div class="form-group">
+				<span id="spTarea">tarea 1</span>
+			  </div>
+		  </div>
+		  <div class="col-sm-4">
+			 <div class="form-group">
+				  <a href="#" id="complete">
+					<span class="glyphicon glyphicon-ok"></span>
+				</a>
+						<a href="#" id="delete">
+					<span class="glyphicon glyphicon-remove"></span>
+				</a>
+			  </div>
+
+		  </div>
+	  </div>
+    </div>
+  </div>
+</div>
+<div class="share-wrapper col-xs-1 col-xs-push-10 ">
+          <a href="javascript:void(0)" id="addMore" style="background: none">
+            <i class="icon icon-material-share btn btn-info btn-raised withripple glyphicon glyphicon-plus" style="color: #03a9f4; background: rgba(255, 255, 255, 0.90); font-size: 30px; padding-left: 16px; padding-top: 14px; height: 60px;">
+              <div class="share-ripple ripple-wrapper"></div>
+              </i>
+           </a>
+       </div>
+<script>
+//$(".formclass").clone().insertBefore(".formclass");
+$("#addMore").click(function(){
+  console.log("entrando");
+ $('<div class="row">'+
+    '<div class="col-sm-4">'+
+     '<div class="form-group">'+
+     '<input type="text" class="form-control txtTask" id="txtTask" placeholder="Nueva Tarea"  />'+
+     '</div>'+
+     '</div>'+
+     '<div class="col-sm-4">'+
+     '<div class="form-group">'+
+     '<div class="form-group">'+
+     '<select class="form-control select" id="selectTipo">'+
+     '<option>Seleccione la Prioridad...</option>'+
+     '<option>Normal</option>'+
+     '<option>Urgente</option>'+
+     '</select>'+
+     '</div>'+
+     '</div>'+
+     '</div>'+
+     '<div class="col-sm-4">'+
+     '</div>'+
+     '</div>').appendTo(".formclass");
+
+       recorre();
+
+ });
+ function recorre()
+ {
+     var inp = $(".txtTask");
+ $.each(inp, function(value, key){
+   console.log($(this).val());
+//  console.log($(this).attr("value"));
+ });
+}
+ /*
+ $("#btn").click(function(){
+
+ var inp = $("#in");
+
+ });
+
+ });
+*/
+
+</script>
+
+
+</body>
+</html>
