@@ -21,22 +21,26 @@ $(document).ready(function()
        '<div class="col-sm-6">'+
        '</div>'+
        '</div>').appendTo(".formclass");
-
+//llamando la funcion
        recorre();
      });
+     //funcion que recorre lOS INput
    function recorre()
    {
+
      var inp = $(".txtTask");
      $(".txtTask").each( function()
      {
        console.log($(this).val());
 //  console.log($(this).attr("value"));
       });
+      /*
      $(".select").each( function()
      {
        console.log($(this).val());
 //  console.log($(this).attr("value"));
-      });
+      });*/
+      //Donde se captura el select
       $( ".select" )
   .change(function() {
 
