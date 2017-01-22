@@ -7,31 +7,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="script/funciones.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   </head>
-  <style>
-.share-wrapper {
-      position: fixed;
-      bottom: 15px;
-      margin-left: -15px;
-  }
-
-  .share-dropdown-wrapper:hover {
-      background: none;
-  }
-
-  .icon-material-share {
-      border-radius: 100px;
-      width: 62px;
-      padding-left: 10px;
-  }
-
-  .share-ripple {
-      border-radius: 100px;
-  }
-</style>
 <body>
 
 <div class="container">
@@ -45,12 +27,12 @@
     <div id="nueva" class="tab-pane fade in active">
       <h3>Nueva Tarea</h3>
 	  <div class="row formclass" id="form">
-		  <div class="col-sm-4">
+		  <div class="col-sm-6">
 			 <div class="form-group">
 				<input type="text" class="form-control" id="txtTask" placeholder="Nueva Tarea">
 			  </div>
 		  </div>
-		  <div class="col-sm-4">
+		  <div class="col-sm-6">
 			 <div class="form-group">
 				 <div class="form-group">
 					<select class="form-control" id="selectTipo">
@@ -61,43 +43,31 @@
 				  </div>
 			  </div>
 		  </div>
-		  <div class="col-sm-4">
-			 <div class="form-group"><!--
-				  <a href="#" id="addMore2">
-					<span class="glyphicon glyphicon-plus"></span>
-				</a>-->
-			  </div>
-		  </div>
+
 	  </div>
 
 	  <button id="btnAgregar" class="btn btn-primary">Agregar</button>
     </div>
     <div id="buscar" class="tab-pane fade">
 	<div class="row">
-		  <div class="col-sm-4">
+		  <div class="col-sm-6">
 			 <div class="form-group">
 				<input type="text" class="form-control" id="txtBuscar" placeholder="tarea">
 			  </div>
 		  </div>
-		  <div class="col-sm-4">
+		  <div class="col-sm-6">
 			 <div class="form-group">
 					<button id="btnBuscar" class="btn btn-primary">Buscar</button>
 			  </div>
 		  </div>
 	  </div>
-
-
-
-
-
-
       	  <div class="row">
-		  <div class="col-sm-4">
+		  <div class="col-sm-6">
 			 <div class="form-group">
 				<span id="spTarea">tarea 1</span>
 			  </div>
 		  </div>
-		  <div class="col-sm-4">
+		  <div class="col-sm-6">
 			 <div class="form-group">
 				  <a href="#" id="complete">
 					<span class="glyphicon glyphicon-ok"></span>
@@ -119,18 +89,17 @@
               </i>
            </a>
        </div>
-<script>
+<script>/*
 //$(".formclass").clone().insertBefore(".formclass");
 $("#addMore").click(function(){
   console.log("entrando");
  $('<div class="row">'+
-    '<div class="col-sm-4">'+
+    '<div class="col-sm-6">'+
      '<div class="form-group">'+
      '<input type="text" class="form-control txtTask" id="txtTask" placeholder="Nueva Tarea"  />'+
      '</div>'+
      '</div>'+
-     '<div class="col-sm-4">'+
-     '<div class="form-group">'+
+     '<div class="col-sm-6">'+
      '<div class="form-group">'+
      '<select class="form-control select" id="selectTipo">'+
      '<option>Seleccione la Prioridad...</option>'+
@@ -139,8 +108,7 @@ $("#addMore").click(function(){
      '</select>'+
      '</div>'+
      '</div>'+
-     '</div>'+
-     '<div class="col-sm-4">'+
+     '<div class="col-sm-6">'+
      '</div>'+
      '</div>').appendTo(".formclass");
 
@@ -154,7 +122,7 @@ $("#addMore").click(function(){
    console.log($(this).val());
 //  console.log($(this).attr("value"));
  });
-}
+}*/
  /*
  $("#btn").click(function(){
 
